@@ -89,4 +89,10 @@ El análisis técnico detallado confirmó una intrusión en el entorno Oracle 12
 ## 🛡️ Recomendaciones de Mitigación
 
 ### Acciones Inmediatas
-* **Contención:**
+* **Contención:** Aislar servidores afectados (VLAN de cuarentena) y revocar privilegios DBA no esenciales.
+* **Erradicación:** Ejecutar el comando de PowerShell: `Stop-Process -Name "sqlplus" -Force` para eliminar procesos maliciosos.
+
+### Mejoras a Largo Plazo
+* **Hardening Oracle:** Implementar Database Vault (Prioridad Alta).
+* **Monitoreo:** Desplegar SIEM con reglas Sigma (Prioridad Crítica).
+* **Adicional:** Se sugiere la implementación de políticas de control de acceso más estrictas y una revisión periódica de las cuentas en ambos entornos.

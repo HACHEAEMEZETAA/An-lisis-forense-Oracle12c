@@ -2,96 +2,91 @@
 
 ## 📋 Documentación Completa del Análisis Forense Digital
 
-[cite_start]Este documento presenta la metodología, los procedimientos técnicos y los resultados de un análisis forense digital especializado en entornos Oracle, llevado a cabo por el **Equipo Forense Oracle**[cite: 1]. [cite_start]El proyecto se centra en la identificación, recolección, análisis y preservación de evidencia digital [cite: 12] [cite_start]en un entorno de **Windows Server 2012** con **Oracle 12c**[cite: 309, 260].
+Este documento presenta la metodología, los procedimientos técnicos y los resultados de un análisis forense digital especializado en entornos Oracle, llevado a cabo por el **Equipo Forense Oracle**. El proyecto se centra en la identificación, recolección, análisis y preservación de evidencia digital en un entorno de **Windows Server 2012** con **Oracle 12c**.
 
 ---
 
-## [cite_start]🎯 Objetivos del Proyecto [cite: 58, 62]
+## 🎯 Objetivos del Proyecto
 
-[cite_start]El **Objetivo General** es desarrollar e implementar una metodología forense especializada en entornos Oracle[cite: 61].
+El **Objetivo General** es desarrollar e implementar una metodología forense especializada en entornos Oracle que permita identificar, recolectar y analizar evidencia digital de manera precisa y conforme a las normativas vigentes.
 
 **Objetivos Específicos:**
-* [cite_start]Aplicar protocolos que aseguren la integridad y autenticidad de la evidencia[cite: 63].
-* [cite_start]Detectar y documentar accesos no autorizados y manipulaciones en bases de datos Oracle[cite: 64].
-* [cite_start]Validar y optimizar el proceso forense mediante pruebas piloto y análisis de resultados[cite: 65].
+* Aplicar protocolos que aseguren la integridad y autenticidad de la evidencia.
+* Detectar y documentar accesos no autorizados y manipulaciones en bases de datos Oracle.
+* Validar y optimizar el proceso forense mediante pruebas piloto y análisis de resultados.
 
 ---
 
-## [cite_start]⚖️ Principios Clave y Normativa [cite: 29]
+## ⚖️ Principios Clave y Normativa
 
 El análisis se rige por principios fundamentales y cumple con normativas clave para garantizar la validez legal de la evidencia:
 
 ### Principios Clave
-* [cite_start]**Integridad:** Garantizar que la evidencia no sufra alteraciones[cite: 31, 32].
-* [cite_start]**Cadena de Custodia:** Registro exhaustivo de cada acceso y manipulación[cite: 35, 36].
-* [cite_start]**Repetibilidad:** Diseño de procesos replicables para obtener resultados consistentes[cite: 37, 38].
+* **Integridad:** Garantizar que la evidencia no sufra alteraciones durante su adquisición y análisis.
+* **Cadena de Custodia:** Registro exhaustivo de cada acceso y manipulación de la evidencia para preservar su valor legal.
+* **Repetibilidad:** Diseño de procesos replicables que permitan obtener resultados consistentes en análisis realizados por diferentes expertos.
 
 ### Normativas Relevantes
-* [cite_start]**RGPD (Reglamento General de Protección de Datos):** Normas sobre el tratamiento de datos personales[cite: 42, 43].
-* [cite_start]**Convención de Budapest sobre Ciberdelincuencia:** Marco internacional para delitos informáticos[cite: 48, 49].
-* [cite_start]**ISO/IEC 27037:** Directrices para la identificación, recopilación y preservación de evidencias digitales[cite: 51].
-* [cite_start]**NIST 800-86:** Guía para la realización de análisis forense digital[cite: 54].
+* **RGPD (Reglamento General de Protección de Datos):** Establece principios y obligaciones en el tratamiento de datos personales en la Unión Europea.
+* **Convención de Budapest sobre Ciberdelincuencia:** Marco internacional para la cooperación en la investigación de delitos informáticos.
+* **ISO/IEC 27037:** Directrices para la identificación, recopilación y preservación de evidencias digitales.
+* **NIST 800-86:** Guía para la realización de análisis forense digital en sistemas informáticos.
 
 ---
 
-## [cite_start]⚙️ Fases del Análisis Forense Digital [cite: 90]
+## ⚙️ Fases del Análisis Forense Digital
 
 El proyecto se estructura en fases, siguiendo una metodología de análisis forense digital:
 
-1.  [cite_start]**Identificación:** Determinar la información relevante (logs de auditoría, registros de transacciones) y los sistemas involucrados[cite: 91, 92, 93].
-2.  [cite_start]**Adquisición:** Extracción de datos (copias bit a bit) y captura de registros de transacciones (redo logs, undo logs) sin alterar la información original[cite: 94, 95, 96].
-3.  [cite_start]**Análisis:** Examen detallado de la actividad registrada para identificar irregularidades, accesos no autorizados y patrones de fraude[cite: 97, 98, 99].
-4.  [cite_start]**Documentación y Presentación:** Elaboración de informes técnicos, presentación de evidencias y preparación de testimonio experto[cite: 101, 102, 103, 104].
+1.  **Identificación:** Determinar la información relevante (logs de auditoría, registros de transacciones, archivos de configuración) y los dispositivos y sistemas Oracle involucrados.
+2.  **Adquisición:** Extracción de datos mediante técnicas forenses (copias bit a bit) y captura de registros de transacciones (redo logs, undo logs, flashback logs) sin alterar la información original.
+3.  **Análisis:** Examen detallado de la actividad registrada en la base de datos para identificar irregularidades, detectar accesos no autorizados y correlacionar eventos.
+4.  **Documentación y Presentación:** Elaboración de informes técnicos que incluyan metodología, hallazgos y conclusiones.
 
 ---
 
 ## 🛠️ Herramientas de Software Forense y Entorno
 
-[cite_start]El análisis se realiza en un entorno de laboratorio virtualizado [cite: 105] [cite_start]con **Windows Server 2012** [cite: 108] [cite_start]y **Oracle 12c**[cite: 110], utilizando herramientas especializadas:
+El análisis se realiza en un entorno de laboratorio virtualizado con **Windows Server 2012** y **Oracle 12c**, utilizando herramientas especializadas:
 
-### [cite_start]Herramientas Específicas para Oracle [cite: 163]
-* [cite_start]**Oracle LogMiner:** Análisis detallado de transacciones[cite: 164].
-* [cite_start]**Oracle Auditing:** Monitoreo y revisión de actividades[cite: 166].
-* [cite_start]**SQL Developer Forensics:** Recuperación y análisis de datos eliminados o alterados[cite: 167].
+### Herramientas Específicas para Oracle
+* **Oracle LogMiner:** Análisis detallado de transacciones.
+* **Oracle Auditing:** Monitoreo y revisión de actividades.
+* **AWR (Automatic Workload Repository):** Evaluación del rendimiento y cambios en la base de datos.
+* **SQL Developer Forensics:** Recuperación y análisis de datos eliminados o alterados.
 
-### [cite_start]Software Forense General [cite: 183]
-* [cite_start]**Autopsy:** Plataforma de código abierto para análisis forense de discos y sistemas de archivos, usada para la recuperación de archivos eliminados y análisis de metadatos[cite: 194, 195, 311].
-* [cite_start]**Volatility:** Herramienta para análisis de memoria RAM[cite: 200].
-* [cite_start]**Wireshark:** Analizador de protocolos de red para captura y análisis de tráfico[cite: 205].
-* [cite_start]**Kaspersky Endpoint Security:** Utilizado para la revisión de registros de amenazas[cite: 185, 187].
-* [cite_start]**Nmap:** Herramienta de escaneo de redes para evaluar vulnerabilidades[cite: 211].
+### Software Forense General
+* **Autopsy:** Plataforma de código abierto para análisis forense de discos y sistemas de archivos, usada para la recuperación de archivos eliminados y extracción de metadatos.
+* **Volatility:** Herramienta para análisis de memoria RAM.
+* **Wireshark:** Analizador de protocolos de red para captura y análisis de tráfico.
+* **Kaspersky Endpoint Security:** Utilizado para la revisión de registros de amenazas.
+* **Nmap:** Herramienta de escaneo de redes para detectar dispositivos y evaluar vulnerabilidades.
 
 ---
 
-## [cite_start]🔎 Hallazgos Clave del Análisis (Fase 4 - Día 7-8) [cite: 442]
+## 🔎 Hallazgos Clave del Análisis (Fase 4 - Día 7-8)
 
-[cite_start]El análisis técnico detallado confirmó una intrusión en el entorno[cite: 445, 446], con el siguiente impacto:
+El análisis técnico detallado confirmó una intrusión en el entorno Oracle 12c/Windows Server 2012, con el siguiente impacto:
 
 | Categoría | Nivel | Detalle |
 | :--- | :--- | :--- |
-| **Confidencialidad** | Alto | [cite_start]12 GB de datos sensibles exfiltrados [cite: 456] |
-| **Integridad** | Crítico | [cite_start]Credenciales DBA comprometidas [cite: 456] |
-| **Disponibilidad** | Medio | [cite_start]Downtime de 15 minutos [cite: 456] |
+| **Confidencialidad** | Alto | 12 GB de datos sensibles exfiltrados |
+| **Integridad** | Crítico | Credenciales DBA comprometidas |
+| **Disponibilidad** | Medio | Downtime de 15 minutos |
 
-### [cite_start]Línea de Tiempo del Ataque [cite: 458]
-* [cite_start]**10:15:32:** Explotación de Oracle TNS Listener (CVE-2023-1234)[cite: 459].
-* [cite_start]**10:16:18:** Ejecución de `"sqlplus.exe"` desde `C:\Temp\`[cite: 461].
-* [cite_start]**10:17:45:** Conexión a C2 (`192.168.1.100:443`) vía DNS tunneling[cite: 463].
-* [cite_start]**10:19:30:** Descarga de herramienta Mimikatz en memoria[cite: 464].
+### Línea de Tiempo del Ataque
+* **10:15:32:** Explotación de Oracle TNS Listener (CVE-2023-1234).
+* **10:16:18:** Ejecución de `"sqlplus.exe"` desde `C:\Temp\`.
+* **10:17:45:** Conexión a C2 (`192.168.1.100:443`) vía DNS tunneling.
+* **10:19:30:** Descarga de herramienta Mimikatz en memoria.
 
 ### Evidencia Digital Recolectada
-* [cite_start]**Memoria RAM (Volatility):** Proceso `sqlplus.exe` (PID 1234) cuyo padre era `cmd.exe` (PID 567) con línea de comando maliciosa[cite: 466, 468, 469, 470].
-* [cite_start]**Logs de Oracle:** Consulta maliciosa detectada: `GRANT DBA TO attacker_user;`[cite: 472, 473].
+* **Memoria RAM (Volatility):** Proceso `sqlplus.exe` (PID 1234) cuyo padre era `cmd.exe` (PID 567) con línea de comando maliciosa.
+* **Logs de Oracle:** Consulta maliciosa detectada: `GRANT DBA TO attacker_user;`.
 
 ---
 
-## [cite_start]🛡️ Recomendaciones de Mitigación [cite: 486]
+## 🛡️ Recomendaciones de Mitigación
 
-### [cite_start]Acciones Inmediatas [cite: 487]
-* [cite_start]**Contención:** Aislar servidores afectados (VLAN de cuarentena) y revocar privilegios DBA no esenciales[cite: 489, 490].
-* [cite_start]**Erradicación:** Ejecutar el comando `Stop-Process -Name "sqlplus" -Force` en PowerShell para eliminar procesos maliciosos[cite: 494].
-
-### [cite_start]Mejoras a Largo Plazo [cite: 496, 497]
-* [cite_start]**Hardening Oracle:** Implementar Database Vault (Prioridad Alta)[cite: 497].
-* [cite_start]**Monitoreo:** Desplegar SIEM con reglas Sigma (Prioridad Crítica)[cite: 497].
-* [cite_start]**Adicional:** Se recomienda una revisión periódica de cuentas y la implementación de políticas de control de acceso más estrictas[cite: 621].
+### Acciones Inmediatas
+* **Contención:**
